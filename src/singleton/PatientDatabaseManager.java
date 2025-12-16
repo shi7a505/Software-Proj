@@ -16,7 +16,7 @@ public class PatientDatabaseManager {
         patients = new ArrayList<>();
     }
     
-    public static PatientDatabaseManager getInstance() {
+    public static synchronized PatientDatabaseManager getInstance() {
         if (instance == null) {
             instance = new PatientDatabaseManager();
         }
