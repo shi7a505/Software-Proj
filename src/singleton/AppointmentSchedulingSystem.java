@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Iterator;
 
 /**
  * Singleton Pattern: Appointment Scheduling System
@@ -49,9 +50,11 @@ public class AppointmentSchedulingSystem {
     }
     
     public synchronized boolean cancelAppointment(String appointmentId) {
-        for (Appointment appointment : appointments) {
+        Iterator<Appointment> iterator = appointments.iterator();
+        while (iterator.hasNext()) {
+            Appointment appointment = iterator.next();
             if (appointment.getAppointmentId().equals(appointmentId)) {
-                appointments.remove(appointment);
+                iterator.remove();
                 timeSlotAvailability.put(appointment.getTimeSlot(), true);
                 return true;
             }
