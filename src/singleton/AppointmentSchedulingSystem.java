@@ -41,7 +41,7 @@ public class AppointmentSchedulingSystem {
         String slot = appointment.getTimeSlot();
         
         // Check if time slot is available
-        if (timeSlotAvailability.containsKey(slot) && timeSlotAvailability.get(slot)) {
+        if (Boolean.TRUE.equals(timeSlotAvailability.get(slot))) {
             appointments.add(appointment);
             timeSlotAvailability.put(slot, false);
             return true;
@@ -63,7 +63,7 @@ public class AppointmentSchedulingSystem {
     }
     
     public synchronized boolean checkAvailability(String timeSlot) {
-        return timeSlotAvailability.containsKey(timeSlot) && timeSlotAvailability.get(timeSlot);
+        return Boolean.TRUE.equals(timeSlotAvailability.get(timeSlot));
     }
     
     public synchronized List<Appointment> getAllAppointments() {
