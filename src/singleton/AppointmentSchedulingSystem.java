@@ -50,10 +50,14 @@ public class AppointmentSchedulingSystem {
     }
     
     public synchronized boolean cancelAppointment(String appointmentId) {
+        if (appointmentId == null) {
+            return false;
+        }
+        
         Iterator<Appointment> iterator = appointments.iterator();
         while (iterator.hasNext()) {
             Appointment appointment = iterator.next();
-            if (appointment.getAppointmentId().equals(appointmentId)) {
+            if (appointmentId.equals(appointment.getAppointmentId())) {
                 iterator.remove();
                 timeSlotAvailability.put(appointment.getTimeSlot(), true);
                 return true;
