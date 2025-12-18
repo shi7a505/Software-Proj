@@ -269,7 +269,7 @@ Client
 Only ONE office issues IDs. Everyone goes to the same place.
 
 ### Factory = Restaurant Kitchen
-Order "Pizza" or "Pasta" - kitchen creates it. You don't know how.
+Order "Pizza" or "Pasta" - kitchen knows how to make each type without you specifying the recipe.
 
 ### Decorator = Pizza Toppings
 Start with basic pizza, add cheese, add pepperoni, add mushrooms.

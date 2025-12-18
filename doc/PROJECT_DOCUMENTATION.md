@@ -275,7 +275,7 @@ appointment = new MRIScanDecorator(appointment);    // $800
 **Attributes:**
 - `patientId` - Patient identifier
 - `coveragePercentage` - Percentage covered (0-100)
-- `maxCoverageLimit` - Maximum coverage amount
+- `maxCoverageLimit` - Maximum coverage amount in dollars
 
 #### LegacyInsuranceSystem
 **Purpose:** Old insurance system with outdated data format.
