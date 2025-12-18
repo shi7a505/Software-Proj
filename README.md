@@ -148,7 +148,3 @@ This project demonstrates:
 - Sample data is generated for insurance coverage based on patient ID
 
 ---
-
-## 👨‍💻 Author
-
-University Project - Software Engineering Course
